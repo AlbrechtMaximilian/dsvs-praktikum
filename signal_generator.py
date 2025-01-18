@@ -117,7 +117,7 @@ def plot_acceleration(acceleration):
     az = acceleration[:, 3]
 
     # Plotting acceleration signals
-    fig, axes = plt.subplots(3, 1, figsize=(10, 8))
+    fig, axes = plt.subplots(3, 1, figsize=(12, 10))
     axes[0].plot(t, ax, 'r', linewidth=1.5)
     axes[0].set_title('Acceleration in X-direction')
     axes[0].set_xlabel('Time (s)')
@@ -136,7 +136,7 @@ def plot_acceleration(acceleration):
     axes[2].set_ylabel('a_z (m/s^2)')
     axes[2].grid()
 
-    plt.tight_layout()
+    plt.subplots_adjust(hspace=0.8)  # hspace: vertical distance from subplots
     plt.show()
 
 
@@ -152,7 +152,7 @@ def plot_trajectory(position):
     ax_3d.set_xlabel('X Position (m)')
     ax_3d.set_ylabel('Y Position (m)')
     ax_3d.set_zlabel('Z Position (m)')
-    ax_3d.set_title('3D Zig-Zag Motion Trajectory')
+    ax_3d.set_title('3D Motion Trajectory')
     plt.grid()
     plt.show()
 
