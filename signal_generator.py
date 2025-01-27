@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+np.random.seed(42)
 
 
 def generate_circle_signal(v, fs, p, snr):
@@ -35,6 +36,7 @@ def generate_circle_signal(v, fs, p, snr):
         noise_power = signal_power / (10**(snr / 10))
         noise = np.sqrt(noise_power) * np.random.normal(size=signal.shape)
         return signal + noise
+        #return signal
 
     ax = add_noise(ax, snr)
     ay = add_noise(ay, snr)
