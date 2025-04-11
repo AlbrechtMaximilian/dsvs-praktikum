@@ -8,10 +8,10 @@ def csv_to_numpy(file_path):
 
     # Select and rename relevant columns
     df = df.rename(columns={
-        'Time (s)': 'time',
-        'Linear Acceleration x (m/s^2)': 'ax',
-        'Linear Acceleration y (m/s^2)': 'ay',
-        'Linear Acceleration z (m/s^2)': 'az'
+        "Time (s)": 'time',
+        "Acceleration x (m/s^2)": 'ax',
+        "Acceleration y (m/s^2)": 'ay',
+        "Acceleration z (m/s^2)": 'az'
     })
 
     # Extract relevant columns
