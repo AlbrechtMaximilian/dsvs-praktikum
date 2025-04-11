@@ -154,9 +154,17 @@ def plot_trajectory(position):
     ax_3d.set_xlabel('X Position (m)')
     ax_3d.set_ylabel('Y Position (m)')
     ax_3d.set_zlabel('Z Position (m)')
+
+    # ⬛ Force axes to [0, 1]
+    ax_3d.set_xlim(0, 1)
+    ax_3d.set_ylim(0, 1)
+    ax_3d.set_zlim(0, 1)
+
     ax_3d.set_title('3D Motion Trajectory')
     plt.grid()
     plt.show()
+
+
 
 
 # Example usage
